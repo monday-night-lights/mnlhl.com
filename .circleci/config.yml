@@ -1,11 +1,13 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/project
     docker:
       - image: circleci/node:9-browsers
     steps:
       - checkout
   deploy:
+    working_directory: ~/project
     docker:
       - image: circleci/node:9-browsers
     steps:
