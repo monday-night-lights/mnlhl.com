@@ -20,16 +20,12 @@ jobs:
           command: aws configure set default.s3.signature_version s3v4
       - run:
           name: Deploy to S3
-          command: aws --region us-east-2 s3 sync dist s3://mnlhl.com/ --delete
+          command: aws --region us-east-2 s3 sync ./ s3://mnlhl.com/ --delete
 workflows:
   version: 2
   build_and_deploy:
     jobs:
       - build
-      - hold:
-          type: approval
-          requires:
-            - build
       - deploy:
           requires:
-            - hold
+            - build
