@@ -2,30 +2,97 @@
 
 <head>
     <title>Monday Night Lights</title>
-    <meta name="description" content="The biggest and best hockey league in Metro Detroit, Featuring the Stars of Tomorrow">
+    <meta name="description"
+        content="The biggest and best hockey league in Metro Detroit, Featuring the Stars of Tomorrow">
     <meta name="author" content="Jeremy Drager">
     <meta name="copyright" content="August 2017" />
     <meta name="keywords" content="Monday, Night, Lights, Detroit, Hockey, League, " />
-    <link rel="stylesheet" type="text/css" href="_css/styles.css" media="all" />
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
 <body>
+    <ul id="stats-dropdown" class="dropdown-content">
+        <li><a class="black-text" target="_blank"
+                href="https://docs.google.com/spreadsheets/d/11HKFGPgWCA3g8auTNNSqVtyKk6WBuV7UeRYarVTBHvk/edit?usp=drive_web&ouid=111468611990100978539"><i
+                    class="material-icons light-green-text darken-1 small left">local_florist</i>2019 Spring</a></li>
+        <li class="divider"></li>
+        <li><a class="black-text" target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1MWKxBdUF8HegOtyjkznthRbGB42F2xrUD_Iryzv7ShQ/edit?usp=drive_web&ouid=111468611990100978539"><i
+                    class="material-icons blue-text lighten-1 small left">ac_unit</i>2018-2019 Fall/Winter</a></li>
+        <li><a class="black-text" target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1WClOUoLELrxeNaM1RsbCmuuvXLOymLpHrcTpEqiKTJw/edit?usp=drive_web&ouid=111468611990100978539"><i
+                    class="material-icons light-green-text darken-1 small left">local_florist</i>2018 Spring</a></li>
+        <li><a class="black-text" target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1RIyVc1_oHFueUpZbnrFtMGXraZfEh-bEkbz24GHr9OU/edit?usp=drive_web&ouid=111468611990100978539"><i
+                    class="material-icons blue-text lighten-1 small left">ac_unit</i>2017-2018 Fall/Winter</a></li>
+        <li><a class="black-text" target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1Lo65fOUp1ZTWTYhYUeZYf6CivhsDegq9-4z4xgZbBO8/edit?usp=drive_web&ouid=111468611990100978539"><i
+                    class="material-icons light-green-text darken-1 small left">local_florist</i>2017 Spring</a></li>
+        <li><a class="black-text" target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1JcjwMdsjzPI-WesV6l4O0eThWGVUAvN7-Z7lTrUG_iY/edit?usp=drive_web&ouid=111468611990100978539"><i
+                    class="material-icons blue-text lighten-1 small left">ac_unit</i>2016-2017 Fall/Winter</a></li>
+    </ul>
     <nav class="grey darken-4">
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <div class="nav-wrapper container">
-            <a href="#" class="brand-logo">Monday Night Lights</a>
+
+            <a href="#" class="brand-logo"><img src="img/mnlhl-logo.png" class="brand-logo"/></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="http://stats.mnlhl.com">Stats</a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="stats-dropdown">Stats<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a href="http://news.mnlhl.com">MNLHN</a></li>
                 <li><a href="https://mnlhl.slack.com">Chat</a></li>
             </ul>
         </div>
     </nav>
-    <div style="width: 100%; min-height: 200px; max-height: 400px; background-image: url('img/allstar-small.jpg'); background-size: cover; background-position-y: 60%; height: 300px;"></div>
+    <ul id="slide-out" class="sidenav">
+        <li class="logo"><a href="#" class="brand-logo"><img src="img/mnlhl-logo.png" class="brand-logo responsive-img" /></a></li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">Stats<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a class="black-text" target="_blank"
+                                    href="https://docs.google.com/spreadsheets/d/11HKFGPgWCA3g8auTNNSqVtyKk6WBuV7UeRYarVTBHvk/edit?usp=drive_web&ouid=111468611990100978539"><i
+                                        class="material-icons light-green-text darken-1 small left">local_florist</i>2019
+                                    Spring</a></li>
+                            <li class="divider"></li>
+                            <li><a class="black-text" target="_blank"
+                                    href="https://docs.google.com/spreadsheets/d/1MWKxBdUF8HegOtyjkznthRbGB42F2xrUD_Iryzv7ShQ/edit?usp=drive_web&ouid=111468611990100978539"><i
+                                        class="material-icons blue-text lighten-1 small left">ac_unit</i>2018-2019
+                                    Fall/Winter</a></li>
+                            <li><a class="black-text" target="_blank"
+                                    href="https://docs.google.com/spreadsheets/d/1WClOUoLELrxeNaM1RsbCmuuvXLOymLpHrcTpEqiKTJw/edit?usp=drive_web&ouid=111468611990100978539"><i
+                                        class="material-icons light-green-text darken-1 small left">local_florist</i>2018
+                                    Spring</a></li>
+                            <li><a class="black-text" target="_blank"
+                                    href="https://docs.google.com/spreadsheets/d/1RIyVc1_oHFueUpZbnrFtMGXraZfEh-bEkbz24GHr9OU/edit?usp=drive_web&ouid=111468611990100978539"><i
+                                        class="material-icons blue-text lighten-1 small left">ac_unit</i>2017-2018
+                                    Fall/Winter</a></li>
+                            <li><a class="black-text" target="_blank"
+                                    href="https://docs.google.com/spreadsheets/d/1Lo65fOUp1ZTWTYhYUeZYf6CivhsDegq9-4z4xgZbBO8/edit?usp=drive_web&ouid=111468611990100978539"><i
+                                        class="material-icons light-green-text darken-1 small left">local_florist</i>2017
+                                    Spring</a></li>
+                            <li><a class="black-text" target="_blank"
+                                    href="https://docs.google.com/spreadsheets/d/1JcjwMdsjzPI-WesV6l4O0eThWGVUAvN7-Z7lTrUG_iY/edit?usp=drive_web&ouid=111468611990100978539"><i
+                                        class="material-icons blue-text lighten-1 small left">ac_unit</i>2016-2017
+                                    Fall/Winter</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li><a href="http://news.mnlhl.com">News</a></li>
+        <li><a href="https://mnlhl.slack.com">Slack</a></li>
+    </ul>
+    <div
+        style="width: 100%; min-height: 200px; max-height: 400px; background-image: url('img/allstar-small.jpg'); background-size: cover; background-position-y: 60%; height: 300px;">
+    </div>
     <div class="container" style="margin-top: 15px">
         <div class="row">
             <div class="col l4 s12">
@@ -43,7 +110,8 @@
                 <div class="card">
                     <div class="card-content" style="min-height: 200px">
                         <span class="card-title">Monday Night Lights Hockey Network</span>
-                        <p>Your best source for Monday Night Lights news, rumors, analysis, stats and recaps, written by players for players.</p>
+                        <p>Your best source for Monday Night Lights news, rumors, analysis, stats and recaps, written by
+                            players, for players.</p>
                     </div>
                     <div class="card-action">
                         <a href="http://news.mnlhl.com">Click Here</a>
@@ -63,6 +131,13 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".dropdown-trigger").dropdown();
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+        });
+    </script>
 </body>
 
 </html>

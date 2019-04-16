@@ -1,0 +1,20 @@
+.brand-logo {
+    height: 100%;
+}
+
+.sidenav li.logo {
+    height: 150px;
+}
+
+.sidenav li.logo a {
+    height: 150px;
+}
+
+#stats-dropdown{
+    min-width: 230px !important;
+    top: 64px !important;
+}
+
+#stats-dropdown i.material-icons.left{
+    margin: 0 10px 0 0;
+}
