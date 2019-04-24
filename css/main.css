@@ -2,6 +2,10 @@
     height: 100%;
 }
 
+.sidenav li {
+    line-height: 60px;
+}
+
 .sidenav li.logo {
     height: 150px;
 }
