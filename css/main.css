@@ -2,6 +2,10 @@
     height: 100%;
 }
 
+.sidenav li {
+    line-height: 60px;
+}
+
 .sidenav li.logo {
     height: 150px;
 }
@@ -10,11 +14,40 @@
     height: 150px;
 }
 
-#stats-dropdown{
+.sidenav#slide-out .collapsible-header {
+    padding: 0 32px;
+}
+
+nav .sidenav-trigger .material-icons {
+    font-size: 4rem;
+}
+
+#stats-dropdown {
     min-width: 230px !important;
     top: 64px !important;
 }
 
-#stats-dropdown i.material-icons.left{
+#stats-dropdown i.material-icons.left {
     margin: 0 10px 0 0;
+}
+
+.all-star-jumbo {
+    width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+    background-image: url('../img/allstar-small.jpg');
+    background-size: cover;
+    background-position-y: 60%;
+    height: 300px;
+}
+
+.card-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.card-row .card {
+    flex-grow: 1;
 }
