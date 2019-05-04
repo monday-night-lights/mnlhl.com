@@ -45,13 +45,15 @@ workflows:
           context: AWS
           requires:
             - build
-          branches:
-            ignore:
-              - master
+          filters:
+            branches:
+              ignore:
+                - master
       - deploy:
           context: AWS
           requires:
             - build
-          branches:
-            only:
-              - master
+          filters:
+            branches:
+              only:
+                - master
