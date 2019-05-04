@@ -37,6 +37,13 @@ nav .sidenav-trigger .material-icons {
     background-size: cover;
 }
 
+@media (min-width: 2000px) {
+    .jumbo {
+        background-position-y: center !important;
+        min-height: 1000px;
+    }
+}
+
 .jumbo.all-star {
     background-image: url('../img/allstar-small.jpg');
     background-position-y: -400px;
@@ -66,7 +73,7 @@ nav .sidenav-trigger .material-icons {
     background-position-y: -100px;
 }
 
-@media screen and (max-width: 992px) {
+@media (max-width: 1024px) {
     .jumbo {
         background-position-y: center !important;
     }
@@ -86,4 +93,10 @@ nav .sidenav-trigger .material-icons {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+    .flow-text {
+        font-size: initial !important;
+    }
 }
