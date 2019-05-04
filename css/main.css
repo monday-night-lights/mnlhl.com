@@ -97,6 +97,6 @@ nav .sidenav-trigger .material-icons {
 
 @media (min-width: 1024px) {
     .flow-text {
-        font-size: initial !important;
+        font-size: initial !important; 
     }
 }
