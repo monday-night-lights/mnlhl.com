@@ -31,14 +31,47 @@ nav .sidenav-trigger .material-icons {
     margin: 0 10px 0 0;
 }
 
-.all-star-jumbo {
+.jumbo {
     width: 100%;
-    min-height: 200px;
-    max-height: 400px;
-    background-image: url('../img/taylors.jpg');
+    min-height: 600px;
     background-size: cover;
-    background-position-y: 60%;
-    height: 300px;
+    /* background-position-y: 60%;
+    height: 300px; */
+}
+
+.jumbo.all-star {
+    background-image: url('../img/allstar-small.jpg');
+    background-position-y: -400px;
+}
+
+.jumbo.taylors {
+    background-image: url('../img/taylors.jpg');
+    background-position-y: -400px;
+}
+
+.jumbo.diques {
+    background-image: url('../img/diques.jpg');
+    background-position-y: -125px
+}
+
+.jumbo.americans {
+    background-image: url('../img/americans.jpg');
+}
+
+.jumbo.broadcast {
+    background-image: url('../img/broadcast.jpeg');
+    background-position-y: -200px;
+}
+
+.jumbo.champions {
+    background-image: url('../img/champions.jpg');
+    background-position-y: -100px;
+}
+
+@media screen and (max-width: 992px) {
+    .jumbo {
+        background-position-y: center !important;
+    }
 }
 
 .card-row {
