@@ -122,7 +122,7 @@
         </ul>
     </header>
     <main>
-        <div class="all-star-jumbo"></div>
+        <div class="jumbo"></div>
         <div class="container" style="margin-top: 15px">
             <div class="card-row row">
                 <div class="card col l3">
@@ -161,6 +161,10 @@
     </main>
     <script type="text/javascript">
         $(document).ready(function () {
+            var classes = ["all-star", "taylors", "diques", "americans", "broadcast", "champions"];
+
+            $(".jumbo").addClass(classes[~~(Math.random() * classes.length)]);
+
             $('.sidenav').sidenav();
             $(".dropdown-trigger").dropdown();
             $('.collapsible').collapsible();
