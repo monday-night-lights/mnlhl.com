@@ -2,12 +2,16 @@
     height: 100%;
 }
 
-.sidenav li {
-    line-height: 60px;
+.sidenav {
+    width: 375px;
+}
+
+.sidenav li a {
+    font-size: 24px;
 }
 
 .sidenav li.logo {
-    height: 150px;
+    height: 200px;
 }
 
 .sidenav li.logo a {
@@ -20,6 +24,10 @@
 
 nav .sidenav-trigger .material-icons {
     font-size: 4rem;
+}
+
+.material-icons.bigger {
+    font-size: 50px;
 }
 
 .drag-target {
