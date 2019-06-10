@@ -112,3 +112,9 @@ nav .sidenav-trigger .material-icons {
         font-size: initial !important;
     }
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

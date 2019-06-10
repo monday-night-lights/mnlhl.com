@@ -59,6 +59,9 @@
                     <li>
                         <a href="https://mnlhl.slack.com"><i class="material-icons left">message</i>Chat</a>
                     </li>
+                    <li>
+                        <a href="#podcast-modal" class="modal-trigger"><i class="material-icons left">headset</i>Podcast</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -119,6 +122,8 @@
             </li>
             <li class="bold"><a href="http://news.mnlhl.com"><i class="material-icons left">ballot</i>News</a></li>
             <li class="bold"><a href="https://mnlhl.slack.com"><i class="material-icons left">message</i>Slack</a></li>
+            <li class="bold"><a href="#podcast-modal" class="modal-trigger"><i
+                        class="material-icons left">headset</i>Podcast</a></a>
         </ul>
     </header>
     <main>
@@ -137,7 +142,8 @@
                 <div class="card grey lighten-4 col l3 s11">
                     <div class="card-content">
                         <span class="card-title">Monday Night Lights Hockey Network</span>
-                        <p class="flow-text">Your best source for Monday Night Lights news, rumors, analysis, stats and recaps, written by players, for players.</p>
+                        <p class="flow-text">Your best source for Monday Night Lights news, rumors, analysis, stats and
+                            recaps, written by players, for players.</p>
                     </div>
                     <div class="card-action">
                         <a href="http://news.mnlhl.com" class="flow-text">Click Here</a>
@@ -146,7 +152,8 @@
                 <div class="card grey lighten-4 col l3 s11">
                     <div class="card-content">
                         <span class="card-title">MNL Slack Chat</span>
-                        <p class="flow-text">This is where chat, strategizing, and very important announcements are made.</p>
+                        <p class="flow-text">This is where chat, strategizing, and very important announcements are
+                            made.</p>
                     </div>
                     <div class="card-action">
                         <a href="https://mnlhl.slack.com" class="flow-text">Click Here</a>
@@ -155,29 +162,47 @@
             </div>
         </div>
         <footer class="page-footer grey darken-4">
-                <div class="container">
-                  <div class="row">
+            <div class="container">
+                <div class="row">
                     <div class="col l6 s12">
-                      <h5 class="white-text flow-text">Monday Night Lights Hockey League</h5>
-                      <p class="grey-text text-lighten-1 flow-text">Located in Hazel Park, Michigan, Monday Night Lights is the most prestigious men's hockey league in Southeastern Michigan</p>
+                        <h5 class="white-text flow-text">Monday Night Lights Hockey League</h5>
+                        <p class="grey-text text-lighten-1 flow-text">Located in Hazel Park, Michigan, Monday Night
+                            Lights is the most prestigious men's hockey league in Southeastern Michigan</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
-                      <h5 class="white-text flow-text">Social</h5>
-                      <ul>
-                        <li><a class="grey-text text-lighten-3 flow-text" href="https://twitter.com/mnl_hockey">Twitter</a></li>
-                        <li><a class="grey-text text-lighten-3 flow-text" href="https://www.instagram.com/mnl_hockey/">Instagram</a></li>
-                        <li><a class="grey-text text-lighten-3 flow-text" href="https://www.youtube.com/channel/UCkSRdje5r7dCKeuZaeitlXw">Youtube</a></li>
-                        <li><a class="grey-text text-lighten-3 flow-text" href="https://www.twitch.tv/mnlhl">Twitch</a></li>
-                      </ul>
+                        <h5 class="white-text flow-text">Social</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3 flow-text"
+                                    href="https://twitter.com/mnl_hockey">Twitter</a></li>
+                            <li><a class="grey-text text-lighten-3 flow-text"
+                                    href="https://www.instagram.com/mnl_hockey/">Instagram</a></li>
+                            <li><a class="grey-text text-lighten-3 flow-text"
+                                    href="https://www.youtube.com/channel/UCkSRdje5r7dCKeuZaeitlXw">Youtube</a></li>
+                            <li><a class="grey-text text-lighten-3 flow-text"
+                                    href="https://www.twitch.tv/mnlhl">Twitch</a></li>
+                        </ul>
                     </div>
-                  </div>
                 </div>
-                <div class="footer-copyright black">
-                  <div class="container flow-text">
+            </div>
+            <div class="footer-copyright black">
+                <div class="container flow-text">
                     &copy; 2019 Monday Night Lights Hockey League
-                  </div>
                 </div>
-              </footer>
+            </div>
+        </footer>
+        <div id="podcast-modal" class="modal">
+            <div class="modal-content">
+                <h4>Monday Night Lights Podcast</h4>
+                <p>A podcast about MNL Hockey League. 70 skaters, 7 goalies, and 1 dream.</p>
+                <img src="img/podcast.png" alt="A podcast about MNL Hockey League. 70 skaters, 7 goalies, and 1 dream." class="center responsive-img"/>
+            </div>
+            <div class="modal-footer">
+                <a href="http://feeds.feedburner.com/blogspot/mnlpodcast" class="waves-effect waves-black btn-flat">Listen on RSS Feed</a>
+                <a href="https://play.google.com/music/m/I75vvrmsmatnlev2nbjh57thdim?t=MNL_Podcast" class="waves-effect waves-orange btn-flat">Listen on Google Play</a>
+                <a href="https://open.spotify.com/show/3KgE6mPRGUWnchg9k4rMcZ" class="waves-effect waves-green btn-flat">Listen on Spotify</a>
+                <a href="https://www.youtube.com/playlist?list=PLEpruuj5NdamZD_hb5wSK_8n-GYX67SgQ" class="waves-effect waves-red btn-flat">Watch on YouTube</a>
+            </div>
+        </div>
     </main>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -188,6 +213,7 @@
             $('.sidenav').sidenav();
             $(".dropdown-trigger").dropdown();
             $('.collapsible').collapsible();
+            $('.modal').modal();
         });
     </script>
 </body>
