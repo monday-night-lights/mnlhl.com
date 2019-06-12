@@ -85,6 +85,11 @@ nav .sidenav-trigger .material-icons {
   background-position-y: -100px;
 }
 
+.jumbo.weaver {
+  background-image: url('../img/weaver.jpg');
+  background-position-y: -250px;
+}
+
 @media (max-width: 1024px) {
   .jumbo {
     background-position-y: center !important;
