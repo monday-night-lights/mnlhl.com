@@ -123,8 +123,8 @@
             </li>
             <li class="bold"><a href="http://news.mnlhl.com"><i class="material-icons left">ballot</i>News</a></li>
             <li class="bold"><a href="https://mnlhl.slack.com"><i class="material-icons left">message</i>Slack</a></li>
-            <li class="bold"><a href="#podcast-modal" class="modal-trigger"><i
-                        class="material-icons left">headset</i>Podcast</a></a>
+            <li class="bold"><a href="#podcast-modal" class="modal-trigger">
+                    <i class="material-icons left">headset</i>Podcast</a></li>
         </ul>
     </header>
     <main>
@@ -196,12 +196,12 @@
                 <h4>Monday Night Lights Podcast</h4>
                 <p>A podcast about MNL Hockey League. 70 skaters, 7 goalies, and 1 dream.</p>
                 <div class="row">
-                    <div class="col s12 m6">
+                    <div class="col m12 l6">
                         <img src="img/podcast.png"
                             alt="A podcast about MNL Hockey League. 70 skaters, 7 goalies, and 1 dream."
                             class="center responsive-img" />
                     </div>
-                    <div class="col s12 m6">
+                    <div class="col m12 l6">
                         <div class="podcast-list">
                             <a href="http://feeds.feedburner.com/blogspot/mnlpodcast"
                                 class="waves-effect waves-black btn-flat">Listen on RSS Feed</a>
@@ -232,6 +232,12 @@
             $(".dropdown-trigger").dropdown();
             $('.collapsible').collapsible();
             $('.modal').modal();
+
+            if (window.location.hash === "#podcast") {
+                var modal = document.getElementById("podcast-modal");
+                M.Modal.getInstance(modal).open();
+            }
+
         });
     </script>
 </body>
