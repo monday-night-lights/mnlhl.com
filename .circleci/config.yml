@@ -33,6 +33,9 @@ jobs:
       - run:
           name: Setting Signature Version 4 for S3 Request Authentication
           command: aws configure set default.s3.signature_version s3v4
+      - run: 
+          name: Add Cloudfront as Preview Service
+          command: aws configure set preview.cloudfront true
       - run:
           name: Deploy to S3
           command: aws --region us-east-2 s3 sync ./ s3://mnlhl.com/ --delete
