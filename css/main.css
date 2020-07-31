@@ -22,8 +22,18 @@
   padding: 0 32px;
 }
 
+.sidenav#slide-out .collapsible-body li a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 nav .sidenav-trigger .material-icons {
   font-size: 4rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 95%;
 }
 
 .material-icons.bigger {
@@ -47,6 +57,7 @@ nav .sidenav-trigger .material-icons {
   width: 100%;
   min-height: 600px;
   background-size: cover;
+  background-position-x: center;
 }
 
 @media (min-width: 2000px) {
@@ -88,6 +99,10 @@ nav .sidenav-trigger .material-icons {
 .jumbo.weaver {
   background-image: url('../img/weaver.jpg');
   background-position-y: -250px;
+}
+
+.jumbo.stars {
+  background-image: url('../img/stars.JPG');
 }
 
 @media (max-width: 1024px) {
