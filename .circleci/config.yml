@@ -16,6 +16,7 @@ jobs:
           name: Install AWS cli
           command: |
                   sudo apt-get install python-dev python-pip
+                  sudo pip install futures
                   sudo pip install awscli
       - run:
           name: Setting Signature Version 4 for S3 Request Authentication
