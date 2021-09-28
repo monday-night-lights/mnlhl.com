@@ -3,40 +3,30 @@ jobs:
   build:
     working_directory: ~/project
     docker:
-      - image: circleci/node:9-browsers
+      - image: circleci/node:9.0-browsers
     steps:
       - checkout
   deploy_to_staging:
     working_directory: ~/project
     docker:
-      - image: circleci/node:9-browsers
+      - image: circleci/python:3-browsers
     steps:
       - checkout
       - run:
           name: Install AWS cli
-          command: |
-                  sudo apt-get install python-dev python-pip
-                  sudo pip install awscli
-      - run:
-          name: Setting Signature Version 4 for S3 Request Authentication
-          command: aws configure set default.s3.signature_version s3v4
+          command: sudo pip install awscli
       - run:
           name: Deploy to S3
           command: aws --region us-east-2 s3 sync ./ s3://dev.mnlhl.com/ --delete
   deploy:
     working_directory: ~/project
     docker:
-      - image: circleci/node:9-browsers
+      - image: circleci/python:3-browsers
     steps:
       - checkout
       - run:
           name: Install AWS cli
-          command: |
-                  sudo apt-get install python-dev python-pip
-                  sudo pip install awscli
-      - run:
-          name: Configure AWS cli
-          command: aws configure set default.s3.signature_version s3v4
+          command: sudo pip install awscli
       - run: 
           name: Add Cloudfront as Preview Service
           command: aws configure set preview.cloudfront true
