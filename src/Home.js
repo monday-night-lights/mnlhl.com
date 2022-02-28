@@ -358,7 +358,10 @@ const Home = () => {
             </div>
             <div className="footer-copyright black">
                 <div className="wrapper flow-text">
-                    &copy; 2019 Monday Night Lights Hockey League
+                    &copy; {new Date().getFullYear()} Monday Night Lights Hockey League
+                    <a href="https://github.com/monday-night-lights/mnlhl.com">
+                        <span className="material-icons">code</span>
+                    </a>
                 </div>
             </div>
         </footer>

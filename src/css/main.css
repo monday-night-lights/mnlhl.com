@@ -145,3 +145,11 @@ nav .sidenav-trigger .material-icons {
   justify-content: space-between;
   text-align: center;
 }
+
+.footer-copyright a {
+  float: right;
+  color: #444;
+}
+.footer-copyright .material-icons {
+  font-size: 18px;
+}
