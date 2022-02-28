@@ -4,7 +4,7 @@ The homepage for the Monday Night Lights Hockey League
 
 ## Development
 
-The website is built with [React](https://reactjs.org/). To get a React dev environment running:
+The website is built with [React](https://reactjs.org/).
 
 ### Prerequisites
 
