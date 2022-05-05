@@ -12,12 +12,21 @@ const Home = () => {
                 <a
                 className="black-text"
                 target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1przDuucyDZlJr9__jRANXNTpbKCL2wsSMs1v0HlRFII/edit#gid=1935094419">
+                    <i className="material-icons light-green-text darken-1 small left">local_florist</i>
+                    2022 Spring
+                </a>
+            </li>
+            <li className="divider"></li>
+            <li>
+                <a
+                className="black-text"
+                target="_blank"
                 href="https://docs.google.com/spreadsheets/d/1obVvplKsLh5RgOwhJQeYiuu6dpMAbMUJqzIvOuFqNDM/edit#gid=679131733">
                     <i className="material-icons blue-text lighten-1 small left">ac_unit</i>
                     2021-2022 Fall/Winter
                 </a>
             </li>
-            <li className="divider"></li>
             <li>
                 <a
                 className="black-text"
@@ -161,7 +170,17 @@ const Home = () => {
                         </a>
                         <div className="collapsible-body">
                             <ul>
-                                <li className="bold">
+                               <li className="bold">
+                                    <a
+                                    className="black-text"
+                                    target="_blank"
+                                    href="https://docs.google.com/spreadsheets/d/1przDuucyDZlJr9__jRANXNTpbKCL2wsSMs1v0HlRFII/edit#gid=1935094419">
+                                        <i className="material-icons light-green-text darken-1 small left">local_florist</i>
+                                        2022 Spring
+                                    </a>
+                                </li>
+                                <li className="divider"></li>
+                                <li>
                                     <a
                                     className="black-text"
                                     target="_blank"
@@ -170,7 +189,7 @@ const Home = () => {
                                         2021-2022 Fall/Winter
                                     </a>
                                 </li>
-                                <li className="divider"></li>
+
                                 <li>
                                     <a
                                     className="black-text"
@@ -256,12 +275,14 @@ const Home = () => {
                             </ul>
                         </div>
                     </li>
-                    <li className="bold"><a href="#calendar-modal" className="modal-trigger">
+                    <li className="bold">
+                      <a href="#calendar-modal" className="modal-trigger">
                             <i className="material-icons left">event</i>
                             Game Times
                         </a>
                     </li>
-                    <li className="bold"><a href="http://shop.mnlhl.com">
+                    <li className="bold">
+                      <a href="http://shop.mnlhl.com">
                             <i className="material-icons left">shopping_cart</i>
                             Shop
                         </a>
