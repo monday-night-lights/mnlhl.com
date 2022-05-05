@@ -3,9 +3,12 @@ jobs:
   build:
     working_directory: ~/project
     docker:
-      - image: circleci/node:9.0-browsers
+      - image: cimg/node:16.14.0-browsers # LTS
     steps:
       - checkout
+      - run: corepack enable
+      - run: yarn install
+      - run: yarn predeploy
   deploy_to_staging:
     working_directory: ~/project
     docker:
@@ -17,7 +20,7 @@ jobs:
           command: sudo pip install awscli
       - run:
           name: Deploy to S3
-          command: aws --region us-east-2 s3 sync ./ s3://dev.mnlhl.com/ --delete
+          command: aws --region us-east-2 s3 sync ./dist s3://dev.mnlhl.com/ --delete
   deploy:
     working_directory: ~/project
     docker:
@@ -27,12 +30,12 @@ jobs:
       - run:
           name: Install AWS cli
           command: sudo pip install awscli
-      - run: 
+      - run:
           name: Add Cloudfront as Preview Service
           command: aws configure set preview.cloudfront true
       - run:
           name: Deploy to S3
-          command: aws --region us-east-2 s3 sync ./ s3://mnlhl.com/ --delete
+          command: aws --region us-east-2 s3 sync ./dist s3://mnlhl.com/ --delete
       - run:
           name: Invalidate Cloudfront Cache
           command: aws cloudfront create-invalidation --distribution-id E27W7I7S0ZV2X7 --paths "/*"
