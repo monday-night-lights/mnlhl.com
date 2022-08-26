@@ -8,7 +8,17 @@ const Home = () => {
 <div>
     <header>
         <ul id="stats-dropdown" className="dropdown-content">
-            <li className="bold">
+           <li className="bold">
+                <a
+                className="black-text"
+                target="_blank"
+                href="https://docs.google.com/spreadsheets/d/1GZjuqc1D36163y61pbxPCvVqDa-BqCzmELmiLvdARpY/edit#gid=679131733">
+                    <i className="material-icons blue-text lighten-1 small left">ac_unit</i>
+                    2022-2023 Fall/Winter
+                </a>
+            </li>
+            <li className="divider"></li>
+            <li>
                 <a
                 className="black-text"
                 target="_blank"
@@ -17,7 +27,6 @@ const Home = () => {
                     2022 Spring
                 </a>
             </li>
-            <li className="divider"></li>
             <li>
                 <a
                 className="black-text"
@@ -170,7 +179,17 @@ const Home = () => {
                         </a>
                         <div className="collapsible-body">
                             <ul>
-                               <li className="bold">
+                              <li className="bold">
+                                    <a
+                                    className="black-text"
+                                    target="_blank"
+                                    href="https://docs.google.com/spreadsheets/d/1GZjuqc1D36163y61pbxPCvVqDa-BqCzmELmiLvdARpY/edit#gid=679131733">
+                                        <i className="material-icons blue-text lighten-1 small left">ac_unit</i>
+                                        2022-2023 Fall/Winter
+                                    </a>
+                                </li>
+                               <li className="divider"></li>
+                               <li>
                                     <a
                                     className="black-text"
                                     target="_blank"
@@ -179,7 +198,6 @@ const Home = () => {
                                         2022 Spring
                                     </a>
                                 </li>
-                                <li className="divider"></li>
                                 <li>
                                     <a
                                     className="black-text"
