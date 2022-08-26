@@ -10,11 +10,12 @@
   font-size: 24px;
 }
 
-.sidenav li.logo {
-  height: 200px;
+.sidenav .logo {
+  height: 180px;
+  text-align: center;
 }
 
-.sidenav li.logo a {
+.sidenav .logo a {
   height: 150px;
 }
 

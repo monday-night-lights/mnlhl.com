@@ -7,11 +7,17 @@ module.exports = {
   mode: 'development',
   entry: path.resolve(__dirname, 'src/index.js'),
   devtool: 'inline-source-map',
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+      static: path.resolve(__dirname, 'src/static/'),
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       title: 'Monday Night Lights Hockey League',
-      favicon: "./src/img/favicon.ico"
+      favicon: "./src/static/img/favicon.ico",
     })
   ],
   module: {
