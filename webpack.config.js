@@ -7,6 +7,12 @@ module.exports = {
   mode: 'development',
   entry: path.resolve(__dirname, 'src/index.js'),
   devtool: 'inline-source-map',
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+      static: path.resolve(__dirname, 'src/static/'),
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
