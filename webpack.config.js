@@ -17,7 +17,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       title: 'Monday Night Lights Hockey League',
-      favicon: "./src/img/favicon.ico"
+      favicon: "./src/static/img/favicon.ico",
     })
   ],
   module: {
