@@ -339,7 +339,7 @@ const Home = () => {
                     <div className="col l6 s12">
                         <h5 className="white-text flow-text">Monday Night Lights Hockey League</h5>
                         <p className="grey-text text-lighten-1 flow-text">Located in Hazel Park, Michigan, Monday Night
-                            Lights is the most prestigious men's hockey league in Southeastern Michigan</p>
+                            Lights is the most prestigious hockey league in Southeastern Michigan</p>
                     </div>
                     <div className="col l4 offset-l2 s12">
                         <h5 className="white-text flow-text">Social</h5>
