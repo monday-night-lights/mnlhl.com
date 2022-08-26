@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/project
+    working_directory: /tmp/project
     docker:
       - image: cimg/node:16.17.0-browsers # LTS as of 2022-08-25
     steps:
@@ -9,11 +9,14 @@ jobs:
       - run: corepack enable --install-directory ~/bin
       - run: yarn install
       - run: yarn predeploy
-      - store_artifacts:
-          path: dist
+      # save workspace for subsequent jobs
+      - persist_to_workspace:
+          root: /tmp/project
+          paths:
+            - ./dist
 
   deploy_to_staging:
-    working_directory: ~/project
+    working_directory: /tmp/project
     docker:
       - image: circleci/python:3-browsers
     steps:
@@ -22,11 +25,11 @@ jobs:
           name: Install AWS cli
           command: sudo pip install awscli
       - run:
-          name: Deploy to S3
-          command: aws --region us-east-2 s3 sync dist s3://dev.mnlhl.com/ --delete
+          name: Sync dist to dev.mnlhl.com
+          command: aws --region us-east-2 s3 sync tmp/project/dist s3://dev.mnlhl.com/ --delete
 
   deploy:
-    working_directory: ~/project
+    working_directory: /tmp/project
     docker:
       - image: circleci/python:3-browsers
     steps:
@@ -38,8 +41,8 @@ jobs:
           name: Add Cloudfront as preview service
           command: aws configure set preview.cloudfront true
       - run:
-          name: Sync dist/ to S3
-          command: aws --region us-east-2 s3 sync dist s3://mnlhl.com/ --delete
+          name: Sync dist to mnlhl.com
+          command: aws --region us-east-2 s3 sync tmp/project/dist s3://mnlhl.com/ --delete
       - run:
           name: Invalidate Cloudfront cache
           command: aws cloudfront create-invalidation --distribution-id E27W7I7S0ZV2X7 --paths "/*"
