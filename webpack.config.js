@@ -17,15 +17,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       title: 'Monday Night Lights Hockey League',
-      favicon: "./src/static/img/favicon.ico"
-    })
+      favicon: './src/static/img/favicon.ico',
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ['babel-loader'],
       },
       {
         test: /\.css$/,
@@ -35,12 +35,12 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: 'asset/resource',
       },
-    ]
+    ],
   },
   output: {
     path: DIST,
     filename: 'bundle.js',
-    clean: true
+    clean: true,
   },
   devServer: {
     static: DIST,

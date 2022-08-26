@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { StatsMenu } from "./StatsMenu";
-import { MainNavigation } from "./MainNavigation";
-import { SideNavigation } from "./SideNavigation";
+import { StatsMenu } from './StatsMenu';
+import { MainNavigation } from './MainNavigation';
+import { SideNavigation } from './SideNavigation';
 
 export const Header = () => {
   return (
     <header>
-      <StatsMenu />
+      <StatsMenu id='stats-dropdown' className='dropdown-content' />
       <MainNavigation />
       <SideNavigation />
     </header>

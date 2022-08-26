@@ -8,6 +8,8 @@ import 'static/img/favicon.ico';
 import 'static/js/main.js';
 
 ReactDOM.render(
-    <React.StrictMode><Home /></React.StrictMode>,
-    document.getElementById('app')
+  <React.StrictMode>
+    <Home />
+  </React.StrictMode>,
+  document.getElementById('app')
 );
