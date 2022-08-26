@@ -6,7 +6,7 @@ jobs:
       - image: cimg/node:16.17.0-browsers # LTS as of 2022-08-25
     steps:
       - checkout
-      - run: corepack enable
+      - run: corepack enable --install-directory ~/bin
       - run: yarn install
       - run: yarn predeploy
   deploy_to_staging:
