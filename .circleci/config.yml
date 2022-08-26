@@ -10,7 +10,7 @@ jobs:
       - run: yarn install
       - run: yarn predeploy
       - store_artifacts:
-          path: ./dist
+          path: ~/project/dist
 
   deploy_to_staging:
     working_directory: ~/project
@@ -23,7 +23,7 @@ jobs:
           command: sudo pip install awscli
       - run:
           name: Deploy to S3
-          command: aws --region us-east-2 s3 sync ./dist s3://dev.mnlhl.com/ --delete
+          command: aws --region us-east-2 s3 sync ~/project/dist s3://dev.mnlhl.com/ --delete
 
   deploy:
     working_directory: ~/project
@@ -38,8 +38,8 @@ jobs:
           name: Add Cloudfront as preview service
           command: aws configure set preview.cloudfront true
       - run:
-          name: Sync ./dist to S3
-          command: aws --region us-east-2 s3 sync ./dist s3://mnlhl.com/ --delete
+          name: Sync dist/ to S3
+          command: aws --region us-east-2 s3 sync ~/project/dist s3://mnlhl.com/ --delete
       - run:
           name: Invalidate Cloudfront cache
           command: aws cloudfront create-invalidation --distribution-id E27W7I7S0ZV2X7 --paths "/*"
