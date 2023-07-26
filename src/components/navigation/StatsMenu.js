@@ -16,6 +16,11 @@ const SEASON_ICONS = {
 export const seasonStatsLinks = [
   {
     year: 2023,
+    type: SEASON_TYPES.FALL,
+    href: 'https://docs.google.com/spreadsheets/d/1qEEtOdzQv2n1_jhIiF6ACW8nTyRmNcERrHVrSDf8WVk',
+  },
+  {
+    year: 2023,
     type: SEASON_TYPES.SPRING,
     href: 'https://docs.google.com/spreadsheets/d/1OKPb16bHo_z2yvBVI7ugK_RHrlnlNe1AQAkXBJiib2o',
   },
