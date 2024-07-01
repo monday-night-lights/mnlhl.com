@@ -14,8 +14,6 @@ const SEASON_ICONS = {
 };
 
 export const seasonStatsLinks = [
-<<<<<<< HEAD
-=======
    {
     year: 2024,
     type: SEASON_TYPES.SPRING,
@@ -31,7 +29,6 @@ export const seasonStatsLinks = [
     type: SEASON_TYPES.SPRING,
     href: 'https://docs.google.com/spreadsheets/d/1OKPb16bHo_z2yvBVI7ugK_RHrlnlNe1AQAkXBJiib2o',
   },
->>>>>>> 4cbee1ce39e3a7265503094d7d6ec50d00ae6671
   {
     year: 2022,
     type: SEASON_TYPES.FALL,
