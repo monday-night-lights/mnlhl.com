@@ -12,6 +12,21 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components/'),
       static: path.resolve(__dirname, 'src/static/'),
     },
+    fallback: {
+      "https": require.resolve("https-browserify"),
+      "querystring": require.resolve("querystring-es3"),
+      "stream": require.resolve("stream-browserify"),
+      "url": require.resolve("url/"),
+      "os": require.resolve("os-browserify/browser"),
+      "path": require.resolve("path-browserify"),
+      "util": require.resolve("util/"),
+      "process": require.resolve("process/browser"),
+      "zlib": require.resolve("browserify-zlib"),
+      "http": require.resolve("stream-http"),
+      "assert": require.resolve("assert/"),
+      "crypto": require.resolve("crypto-browserify"),
+      "vm": require.resolve("vm-browserify")
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({

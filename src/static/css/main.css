@@ -54,6 +54,57 @@ nav .sidenav-trigger .material-icons {
   margin: 0 10px 0 0;
 }
 
+.schedule-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  width: 99vw;
+  overflow: auto hidden;
+  padding: 0;
+
+  max-height: 0;
+  transition:
+    transform 1s ease-in-out,
+    max-height 1.5s ease-in-out,
+    padding 1s ease-in-out;
+  transform-origin: top;
+  transform: scaleY(0);
+
+  &.loaded {
+    padding: 5px 0;
+    max-height: 200px;
+    transform: scaleY(1);
+  }
+
+  .game {
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 0 15px;
+    min-width: 250px;
+
+    .week {
+      margin: 0.25em 0;
+    }
+
+    .team-line {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      .team-name {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.progress.schedule {
+  margin: 36px 0;
+}
+
 .jumbo {
   width: 100%;
   min-height: 600px;
@@ -69,31 +120,31 @@ nav .sidenav-trigger .material-icons {
 }
 
 .jumbo.all-star {
-  background-image: url('../img/allstar-small.jpg');
+  background-image: url("../img/allstar-small.jpg");
   background-position-y: -400px;
 }
 
 .jumbo.taylors {
-  background-image: url('../img/taylors.jpg');
+  background-image: url("../img/taylors.jpg");
   background-position-y: -400px;
 }
 
 .jumbo.diques {
-  background-image: url('../img/diques.jpg');
+  background-image: url("../img/diques.jpg");
   background-position-y: -125px;
 }
 
 .jumbo.americans {
-  background-image: url('../img/americans.jpg');
+  background-image: url("../img/americans.jpg");
 }
 
 .jumbo.broadcast {
-  background-image: url('../img/broadcast.jpeg');
+  background-image: url("../img/broadcast.jpeg");
   background-position-y: -200px;
 }
 
 .jumbo.champions {
-  background-image: url('../img/champions.jpg');
+  background-image: url("../img/champions.jpg");
   background-position-y: -100px;
 }
 
@@ -103,12 +154,57 @@ nav .sidenav-trigger .material-icons {
 }
 
 .jumbo.stars {
-  background-image: url('../img/stars.JPG');
+  background-image: url("../img/stars.JPG");
+}
+
+.jumbo.whalers {
+  background-image: url("../img/whalers.jpg");
+  background-position-y: -290px;
+}
+
+.jumbo.tigers {
+  background-image: url("../img/tigers.JPG");
+  background-position-y: -200px;
 }
 
 @media (max-width: 1024px) {
   .jumbo {
     background-position-y: center !important;
+  }
+}
+
+.stat-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+
+  margin: 20px;
+  padding: 20px !important;
+
+  min-height: 421px !important;
+  /* transition:
+    transform 1s ease-in-out,
+    min-height 1s ease-in-out,
+    padding 1s ease-in-out; */
+  
+  /* transform: scaleY(0); */
+
+  &.loaded {
+    min-height: auto;
+    /* transform: scaleY(1); */
+  }
+
+  &.col {
+    margin-right: auto;
+  }
+
+  h3 {
+    text-align: center;
+  }
+  .preloader-wrapper.big {
+    height: 128px;
+    width: 128px;
   }
 }
 
