@@ -12,6 +12,7 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components/'),
       static: path.resolve(__dirname, 'src/static/'),
     },
+<<<<<<< HEAD
     fallback: {
       "https": require.resolve("https-browserify"),
       "querystring": require.resolve("querystring-es3"),
@@ -27,6 +28,8 @@ module.exports = {
       "crypto": require.resolve("crypto-browserify"),
       "vm": require.resolve("vm-browserify")
     }
+=======
+>>>>>>> 4cbee1ce39e3a7265503094d7d6ec50d00ae6671
   },
   plugins: [
     new HtmlWebpackPlugin({

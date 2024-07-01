@@ -149,7 +149,7 @@ nav .sidenav-trigger .material-icons {
 }
 
 .jumbo.weaver {
-  background-image: url("../img/weaver.jpg");
+  background-image: url('../img/weaver.jpg');
   background-position-y: -250px;
 }
 
@@ -207,6 +207,7 @@ nav .sidenav-trigger .material-icons {
     width: 128px;
   }
 }
+
 .card-row {
   display: flex;
   align-items: stretch;
