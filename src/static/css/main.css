@@ -1,0 +1,251 @@
+.brand-logo {
+  height: 100%;
+}
+
+.sidenav {
+  width: 375px;
+}
+
+.sidenav li a {
+  font-size: 24px;
+}
+
+.sidenav .logo {
+  height: 180px;
+  text-align: center;
+}
+
+.sidenav .logo a {
+  height: 150px;
+}
+
+.sidenav#slide-out .collapsible-header {
+  padding: 0 32px;
+}
+
+.sidenav#slide-out .collapsible-body li a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+nav .sidenav-trigger .material-icons {
+  font-size: 4rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.material-icons.bigger {
+  font-size: 50px;
+}
+
+.drag-target {
+  width: 40px;
+}
+
+#stats-dropdown {
+  min-width: 230px !important;
+  top: 64px !important;
+}
+
+#stats-dropdown i.material-icons.left {
+  margin: 0 10px 0 0;
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  width: 99vw;
+  overflow: auto hidden;
+  padding: 0;
+
+  max-height: 0;
+  transition:
+    transform 1s ease-in-out,
+    max-height 1.5s ease-in-out,
+    padding 1s ease-in-out;
+  transform-origin: top;
+  transform: scaleY(0);
+
+  &.loaded {
+    padding: 5px 0;
+    max-height: 200px;
+    transform: scaleY(1);
+  }
+
+  .game {
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 0 15px;
+    min-width: 250px;
+
+    .week {
+      margin: 0.25em 0;
+    }
+
+    .team-line {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      .team-name {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.progress.schedule {
+  margin: 36px 0;
+}
+
+.jumbo {
+  width: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-position-x: center;
+}
+
+@media (min-width: 2000px) {
+  .jumbo {
+    background-position-y: center !important;
+    min-height: 1000px;
+  }
+}
+
+.jumbo.all-star {
+  background-image: url("../img/allstar-small.jpg");
+  background-position-y: -400px;
+}
+
+.jumbo.taylors {
+  background-image: url("../img/taylors.jpg");
+  background-position-y: -400px;
+}
+
+.jumbo.diques {
+  background-image: url("../img/diques.jpg");
+  background-position-y: -125px;
+}
+
+.jumbo.americans {
+  background-image: url("../img/americans.jpg");
+}
+
+.jumbo.broadcast {
+  background-image: url("../img/broadcast.jpeg");
+  background-position-y: -200px;
+}
+
+.jumbo.champions {
+  background-image: url("../img/champions.jpg");
+  background-position-y: -100px;
+}
+
+.jumbo.weaver {
+  background-image: url("../img/weaver.jpg");
+  background-position-y: -250px;
+}
+
+.jumbo.stars {
+  background-image: url("../img/stars.JPG");
+}
+
+.jumbo.whalers {
+  background-image: url("../img/whalers.jpg");
+  background-position-y: -290px;
+}
+
+.jumbo.tigers {
+  background-image: url("../img/tigers.JPG");
+  background-position-y: -200px;
+}
+
+@media (max-width: 1024px) {
+  .jumbo {
+    background-position-y: center !important;
+  }
+}
+
+.stat-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+
+  margin: 20px;
+  padding: 20px !important;
+
+  min-height: 421px !important;
+  /* transition:
+    transform 1s ease-in-out,
+    min-height 1s ease-in-out,
+    padding 1s ease-in-out; */
+  
+  /* transform: scaleY(0); */
+
+  &.loaded {
+    min-height: auto;
+    /* transform: scaleY(1); */
+  }
+
+  &.col {
+    margin-right: auto;
+  }
+
+  h3 {
+    text-align: center;
+  }
+  .preloader-wrapper.big {
+    height: 128px;
+    width: 128px;
+  }
+}
+.card-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+
+.card-row .card {
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  .flow-text {
+    font-size: initial !important;
+  }
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.podcast-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.footer-copyright a {
+  float: right;
+  color: #444;
+}
+.footer-copyright .material-icons {
+  font-size: 18px;
+}
