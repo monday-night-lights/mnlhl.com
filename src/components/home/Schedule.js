@@ -38,7 +38,7 @@ export const Schedule = () => {
                   {game["Home Team"]}
                 </span>
                 <span>
-                  {game["Home Score"] ? game["Home Score"] : format(game["Date"], "M/d")}
+                  {game["Home Score"] !== "" ? game["Home Score"] : format(game["Date"], "M/d")}
                 </span>
               </div>
               <div className="team-line">
@@ -46,7 +46,7 @@ export const Schedule = () => {
                   {game["Away Team"]}
                 </span>
                 <span>
-                  {game["Away Score"] ? game["Away Score"] : format(game["Time"], "h:mmaaa")}
+                  {game["Away Score"] !== "" ? game["Away Score"] : format(game["Time"], "h:mmaaa")}
                 </span>
               </div>
             </div>
