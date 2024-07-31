@@ -14,7 +14,12 @@ const SEASON_ICONS = {
 };
 
 export const seasonStatsLinks = [
-   {
+  {
+    year: 2024,
+    type: SEASON_TYPES.FALL,
+    href: 'https://docs.google.com/spreadsheets/d/1u2yZzUpFPvttFXUFb4ZY25-jacDSsYI3iTj6QkZPr-o',
+  }, 
+  {
     year: 2024,
     type: SEASON_TYPES.SPRING,
     href: 'https://docs.google.com/spreadsheets/d/1I7Oe2iGS2zP33P7Lvh6CEVfKISf1dGWgW9hafSSBT2g',
