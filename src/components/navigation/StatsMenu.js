@@ -14,7 +14,12 @@ const SEASON_ICONS = {
 };
 
 export const seasonStatsLinks = [
-    {
+  {
+    year: 2025,
+    type: SEASON_TYPES.FALL,
+    href: 'https://docs.google.com/spreadsheets/d/1WE0kM0NFfl0QrfYZcJAFfzT7X61kKgNov2hGRtAhVx0',
+  },
+  {
     year: 2025,
     type: SEASON_TYPES.SPRING,
     href: 'https://docs.google.com/spreadsheets/d/1yPabpfgj7cnTwR_9XfHyR709thuCTiv73x5-my-d36M',
