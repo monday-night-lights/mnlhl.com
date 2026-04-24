@@ -42,7 +42,7 @@ nav .sidenav-trigger .material-icons {
 }
 
 .drag-target {
-  width: 40px;
+  width: 20px;
 }
 
 #stats-dropdown {
@@ -106,71 +106,177 @@ nav .sidenav-trigger .material-icons {
   margin: 36px 0;
 }
 
-.jumbo {
+.photo-gallery {
+  margin-bottom: 24px;
+}
+
+.photo-gallery__stage {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.photo-gallery__nav-zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.photo-gallery__nav-zone:focus {
+  background: transparent;
+}
+
+.photo-gallery__nav-zone:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+.photo-gallery__nav-zone--left {
+  left: 0;
+  justify-content: flex-start;
+  padding-left: 18px;
+}
+
+.photo-gallery__nav-zone--right {
+  right: 0;
+  justify-content: flex-end;
+  padding-right: 18px;
+}
+
+.photo-gallery__nav-zone--left:hover,
+.photo-gallery__nav-zone--left:focus-visible {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 60%);
+}
+
+.photo-gallery__nav-zone--right:hover,
+.photo-gallery__nav-zone--right:focus-visible {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 60%);
+}
+
+.photo-gallery__nav-icon {
+  font-size: 3rem;
+  opacity: 0.75;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.photo-gallery__image {
+  display: block;
   width: 100%;
-  min-height: 600px;
-  background-size: cover;
-  background-position-x: center;
+  height: clamp(420px, 62vw, 760px);
+  object-fit: cover;
 }
 
-@media (min-width: 2000px) {
-  .jumbo {
-    background-position-y: center !important;
-    min-height: 1000px;
+.photo-gallery__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 2;
+}
+
+.photo-gallery__eyebrow,
+.photo-gallery__count,
+.photo-gallery__title {
+  margin: 0;
+}
+
+.photo-gallery__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.photo-gallery__title {
+  margin-top: 6px;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.2;
+  pointer-events: none;
+}
+
+.photo-gallery__count {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.photo-gallery__dots {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.photo-gallery__dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.photo-gallery__dot:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+.photo-gallery__dot:hover,
+.photo-gallery__dot:focus-visible {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.photo-gallery__dot--active {
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .photo-gallery {
+    margin-top: 0;
   }
-}
 
-.jumbo.all-star {
-  background-image: url("../img/allstar-small.jpg");
-  background-position-y: -400px;
-}
+  .photo-gallery__overlay {
+    padding: 18px;
+  }
 
-.jumbo.taylors {
-  background-image: url("../img/taylors.jpg");
-  background-position-y: -400px;
-}
+  .photo-gallery__nav-zone--left {
+    padding-left: 12px;
+  }
 
-.jumbo.diques {
-  background-image: url("../img/diques.jpg");
-  background-position-y: -125px;
-}
+  .photo-gallery__nav-zone--right {
+    padding-right: 12px;
+  }
 
-.jumbo.americans {
-  background-image: url("../img/americans.jpg");
-}
+  .photo-gallery__nav-icon {
+    font-size: 2.4rem;
+  }
 
-.jumbo.broadcast {
-  background-image: url("../img/broadcast.jpeg");
-  background-position-y: -200px;
-}
-
-.jumbo.champions {
-  background-image: url("../img/champions.jpg");
-  background-position-y: -100px;
-}
-
-.jumbo.weaver {
-  background-image: url('../img/weaver.jpg');
-  background-position-y: -250px;
-}
-
-.jumbo.stars {
-  background-image: url("../img/stars.JPG");
-}
-
-.jumbo.whalers {
-  background-image: url("../img/whalers.jpg");
-  background-position-y: -290px;
-}
-
-.jumbo.tigers {
-  background-image: url("../img/tigers.JPG");
-  background-position-y: -200px;
-}
-
-@media (max-width: 1024px) {
-  .jumbo {
-    background-position-y: center !important;
+  .photo-gallery__dots {
+    gap: 8px;
   }
 }
 
