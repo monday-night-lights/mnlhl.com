@@ -31,10 +31,7 @@ const photos = [
   { src: img2019Seals, caption: "Golden Seals (2019)" },
   { src: img2018Belfor, caption: "MNL Belfor Skate (2018)" },
   { src: img2018Keg, caption: "2018 Keg Champions - Americans" },
-  {
-    src: img2018MiniKeg,
-    caption: "2018 Spring Mini-Keg Champions - Wheelin' Taylors",
-  },
+  { src: img2018MiniKeg, caption: "2018 Spring Champions - Wheelin' Taylors" },
   { src: img2017Diques, caption: "Diques vs. Whalers (2017)" },
   { src: img2016JLA, caption: "Joe Louis Arena Skate (2016)" },
 ];
