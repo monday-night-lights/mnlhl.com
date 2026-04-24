@@ -4,6 +4,7 @@ import { Header } from 'components/navigation/Header';
 import { Schedule } from './Schedule';
 import { Stats } from './Stats';
 import { Cards } from './Cards';
+import { PhotoGallery } from './PhotoGallery';
 import { CalendarModal } from './CalendarModal';
 import { PodcastModal } from './PodcastModal';
 import { Footer } from '../navigation/Footer';
@@ -14,7 +15,7 @@ const Home = () => {
       <Header />
       <main>
         <Schedule />
-        <div className='jumbo'></div>
+        <PhotoGallery />
         <div className='card-row row'>
           <Stats stat={"Goals"} />
           <Stats stat={"Assists"} />
