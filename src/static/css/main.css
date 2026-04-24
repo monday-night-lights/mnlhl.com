@@ -42,7 +42,7 @@ nav .sidenav-trigger .material-icons {
 }
 
 .drag-target {
-  width: 40px;
+  width: 20px;
 }
 
 #stats-dropdown {
@@ -107,7 +107,6 @@ nav .sidenav-trigger .material-icons {
 }
 
 .photo-gallery {
-  margin-top: 24px;
   margin-bottom: 24px;
 }
 
@@ -129,6 +128,18 @@ nav .sidenav-trigger .material-icons {
   background: transparent;
   color: #fff;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.photo-gallery__nav-zone:focus {
+  background: transparent;
+}
+
+.photo-gallery__nav-zone:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
 }
 
 .photo-gallery__nav-zone--left {
@@ -145,12 +156,12 @@ nav .sidenav-trigger .material-icons {
 
 .photo-gallery__nav-zone--left:hover,
 .photo-gallery__nav-zone--left:focus-visible {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0) 60%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 60%);
 }
 
 .photo-gallery__nav-zone--right:hover,
 .photo-gallery__nav-zone--right:focus-visible {
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0) 60%);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 60%);
 }
 
 .photo-gallery__nav-icon {
@@ -193,9 +204,10 @@ nav .sidenav-trigger .material-icons {
 
 .photo-gallery__title {
   margin-top: 6px;
-  font-size: clamp(2rem, 3.5vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.05;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.2;
+  pointer-events: none;
 }
 
 .photo-gallery__count {
@@ -205,10 +217,12 @@ nav .sidenav-trigger .material-icons {
 }
 
 .photo-gallery__dots {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .photo-gallery__dot {
@@ -220,6 +234,14 @@ nav .sidenav-trigger .material-icons {
   background: rgba(255, 255, 255, 0.45);
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.photo-gallery__dot:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
 }
 
 .photo-gallery__dot:hover,
@@ -234,7 +256,7 @@ nav .sidenav-trigger .material-icons {
 
 @media (max-width: 768px) {
   .photo-gallery {
-    margin-top: 16px;
+    margin-top: 0;
   }
 
   .photo-gallery__overlay {
