@@ -18,27 +18,30 @@ import img2025Keg from "static/img/gallery/2025-keg-northstars.jpg";
 import img2026Keg from "static/img/gallery/2026-keg-whalers.jpg";
 
 const photos = [
-  { src: img2026Keg, caption: "2026 Keg Champions" },
-  { src: img2025Keg, caption: "2025 Keg Champions" },
-  { src: img2024Keg, caption: "2024 Keg Champions" },
-  { src: img2023Keg, caption: "2023 Keg Champions" },
-  { src: img2022Draft, caption: "2022 Draft" },
+  { src: img2026Keg, caption: "2026 Keg Champions - Whalers" },
+  { src: img2025Keg, caption: "2025 Keg Champions - North Stars" },
+  { src: img2024Keg, caption: "2024 Keg Champions - Whalers" },
+  { src: img2023Keg, caption: "2023 Keg Champions - Tigers" },
+  { src: img2022Draft, caption: "2022 Fall Draft" },
   { src: img2021LCA, caption: "Little Caesars Arena Skate (2021)" },
-  { src: img2020Keg, caption: "2020 Keg Champions" },
+  { src: img2020Keg, caption: "2020 Keg Champions - North Stars" },
   { src: img2019AllStar, caption: "2019 All-Star Game" },
   { src: img2019Broadcast, caption: "2019 Playoffs Broadcast" },
-  { src: img2019Keg, caption: "2019 Keg Champions" },
+  { src: img2019Keg, caption: "2019 Keg Champions - Nordiques" },
   { src: img2019Seals, caption: "Golden Seals (2019)" },
   { src: img2018Belfor, caption: "MNL Belfor Skate (2018)" },
-  { src: img2018Keg, caption: "2018 Keg Champions" },
-  { src: img2018MiniKeg, caption: "2018 Spring Mini-Keg Champions" },
+  { src: img2018Keg, caption: "2018 Keg Champions - Americans" },
+  {
+    src: img2018MiniKeg,
+    caption: "2018 Spring Mini-Keg Champions - Wheelin' Taylors",
+  },
   { src: img2017Diques, caption: "Diques vs. Whalers (2017)" },
   { src: img2016JLA, caption: "Joe Louis Arena Skate (2016)" },
 ];
 
 export const PhotoGallery = () => {
-  const [activePhotoIndex, setActivePhotoIndex] = useState(
-    () => Math.floor(Math.random() * photos.length),
+  const [activePhotoIndex, setActivePhotoIndex] = useState(() =>
+    Math.floor(Math.random() * photos.length),
   );
   const activePhoto = photos[activePhotoIndex];
 
@@ -57,7 +60,7 @@ export const PhotoGallery = () => {
   };
 
   return (
-    <section className="photo-gallery wrapper" aria-label="photo gallery">
+    <section className="photo-gallery" aria-label="photo gallery">
       <div className="photo-gallery__stage z-depth-2">
         <button
           type="button"
